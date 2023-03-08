@@ -1,0 +1,15 @@
+/* Magic Mirror
+* Module: Iframe
+*
+* By Avella http://github.com/Av3lla
+* MIT Licensed.
+*/
+
+.Iframe header {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.iframe {
+  overflow: hidden;
+}

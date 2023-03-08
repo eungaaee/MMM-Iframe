@@ -1,0 +1,43 @@
+/* Magic Mirror
+* Module: Iframe
+*
+* By Avella https://github.com/Av3lla
+* MIT Licensed.
+*/
+Module.register("Iframe", {
+  defaults: {
+    headerText: 'Iframe',
+    url: null,
+    width: 800,
+    height: 600,
+    updateInterval: 1000 * 60
+  },
+  
+  start: function() {
+    // define global variables
+    Log.info("Starting module: " + this.name);
+    var self = this;
+    setInterval(function() {
+      self.updateDom();
+    }, this.config.updateInterval)
+  },
+  
+  getStyles: function() {
+    return ["Iframe.css"];
+  },
+  
+  getHeader: function() {
+    return `${this.config.headerText}`;
+  },
+  
+  getDom: function() {
+    var iframeDiv = document.createElement("iframe");
+    iframeDiv.className = "iframe";
+    iframeDiv.setAttribute('src', `${this.config.url}`);
+    iframeDiv.setAttribute('width', `${this.config.width}`);
+    iframeDiv.setAttribute('height', `${this.config.height}`);
+    iframeDiv.setAttribute('scrolling', 'no');
+    
+    return iframeDiv;
+  }
+});
