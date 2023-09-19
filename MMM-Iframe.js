@@ -4,7 +4,7 @@
 * By Avella https://github.com/Av3lla
 * MIT Licensed.
 */
-Module.register("Iframe", {
+Module.register("MMM-Iframe", {
   defaults: {
     headerText: 'Iframe',
     url: null,
@@ -23,7 +23,7 @@ Module.register("Iframe", {
   },
   
   getStyles: function() {
-    return ["Iframe.css"];
+    return ["MMM-Iframe.css"];
   },
   
   getHeader: function() {
