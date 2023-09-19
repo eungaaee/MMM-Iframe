@@ -45,6 +45,6 @@ Module.register("MMM-Iframe", {
     
     mainDiv.append(iframeDiv, developedbyDiv);
     
-    return iframeDiv;
+    return mainDiv;
   }
 });
